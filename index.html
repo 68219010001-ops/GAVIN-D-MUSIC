@@ -4,601 +4,292 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>GAVIN:D MUSIC | Official Fan Website</title>
+<title>GAVIN:D | Music Website</title>
 
 <style>
-
-/* ===== BASIC ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background: #100d18;
+    background: #100d0f;
     color: white;
 }
 
-/* ===== HEADER ===== */
+/* Header */
 header {
-    min-height: 400px;
-    background:
-        linear-gradient(135deg, #190b29dd, #38104bdd, #100d18ee),
-        url("https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1500")
-        center/cover;
+    background: #1c1116;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #54202e;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #d94361;
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+nav a:hover {
+    color: #e34c6b;
+}
+
+/* Hero */
+.hero {
+    min-height: 350px;
+    background: linear-gradient(120deg, #35121f, #120d11);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 50px 20px;
+    padding: 40px 20px;
 }
 
-header .small-title {
-    color: #f4a4ff;
+.hero h1 {
+    font-size: 55px;
+    color: #e34c6b;
     letter-spacing: 5px;
-    font-size: 14px;
-    margin-bottom: 20px;
 }
 
-header h1 {
-    font-size: 65px;
-    color: #f3a4ff;
-    letter-spacing: 6px;
-    text-shadow: 0 0 25px #d75aff;
-}
-
-header p {
-    color: #eee;
+.hero p {
+    margin-top: 15px;
+    color: #ddd;
     font-size: 17px;
-    margin-top: 20px;
 }
 
-.header-btn {
-    display: inline-block;
-    margin-top: 30px;
-    background: #a13bc1;
-    color: white;
-    text-decoration: none;
-    padding: 14px 30px;
-    border-radius: 30px;
-    transition: .3s;
+/* Music */
+.music-section {
+    padding: 55px 8%;
 }
 
-.header-btn:hover {
-    background: #e35bdd;
-    transform: scale(1.08);
-}
-
-/* ===== NAVIGATION ===== */
-nav {
-    background: #191323;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-nav button {
-    background: transparent;
-    border: 1px solid #bd65d8;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: .3s;
-}
-
-nav button:hover,
-nav button.active {
-    background: #a13bc1;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px #a13bc155;
-}
-
-/* ===== MAIN CONTENT ===== */
-.container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 55px 25px;
-}
-
-.section-heading {
+.section-title {
+    text-align: center;
     margin-bottom: 35px;
 }
 
-.section-heading h2 {
-    color: #f3a4ff;
-    font-size: 30px;
-    margin-bottom: 12px;
+.section-title h2 {
+    font-size: 32px;
+    color: #e34c6b;
 }
 
-.section-heading p {
+.section-title p {
     color: #aaa;
+    margin-top: 10px;
 }
 
-/* ===== MUSIC CARDS ===== */
 .music-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
-.card {
-    background: #211a2c;
-    border: 1px solid #382843;
-    border-radius: 18px;
-    overflow: hidden;
-    transition: .35s;
+.music-card {
+    background: #21191d;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #38252d;
+    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 35px #b44be655;
-    border-color: #d17ae8;
+.music-card:hover {
+    transform: translateY(-6px);
+    border-color: #e34c6b;
+    box-shadow: 0 8px 25px #0008;
 }
 
-.card img {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    display: block;
-    transition: .4s;
-}
-
-.card:hover img {
-    transform: scale(1.04);
-}
-
-.card-info {
-    padding: 22px;
-}
-
-.category {
-    color: #e59aff;
-    font-size: 12px;
-    letter-spacing: 2px;
-}
-
-.card-info h3 {
+.music-card h3 {
+    color: white;
     font-size: 20px;
-    margin: 12px 0;
+    margin-bottom: 8px;
 }
 
-.card-info p {
+.music-card p {
     color: #aaa;
     font-size: 14px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.spotify-btn {
-    display: inline-block;
-    background: #1ed760;
-    color: #111;
-    text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: .3s;
+.music-card iframe {
+    width: 100%;
+    height: 152px;
+    border: none;
+    border-radius: 12px;
 }
 
-.spotify-btn:hover {
-    background: #65ff97;
-    transform: scale(1.05);
-}
-
-/* ===== SPOTIFY PLAYER ===== */
-.spotify-section {
-    margin-top: 75px;
-    text-align: center;
-}
-
-.spotify-section h2 {
-    color: #f3a4ff;
-    font-size: 30px;
-}
-
-.spotify-section p {
-    color: #aaa;
-    margin: 15px 0 25px;
-}
-
-.spotify-section iframe {
-    border-radius: 15px;
-    max-width: 750px;
-}
-
-/* ===== ABOUT ===== */
+/* About */
 .about {
-    background: #1b1425;
-    padding: 55px 25px;
+    background: #1c1116;
     text-align: center;
+    padding: 50px 20px;
 }
 
 .about h2 {
-    color: #f3a4ff;
-    margin-bottom: 20px;
+    color: #e34c6b;
+    margin-bottom: 15px;
 }
 
 .about p {
     color: #ccc;
-    max-width: 700px;
+    line-height: 1.8;
+    max-width: 650px;
     margin: auto;
-    line-height: 1.9;
 }
 
-/* ===== FOOTER ===== */
+/* Footer */
 footer {
-    background: #0b0910;
+    background: #0a0809;
+    color: #888;
     text-align: center;
-    padding: 35px 15px;
-    color: #999;
-    line-height: 2;
+    padding: 22px;
+    font-size: 14px;
 }
 
-footer h2 {
-    color: #f3a4ff;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 42px;
-    }
-
-    .music-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-}
-
-@media (max-width: 480px) {
-
+/* Responsive */
+@media (max-width: 650px) {
     header {
-        min-height: 350px;
+        flex-direction: column;
+        gap: 18px;
     }
 
-    header h1 {
-        font-size: 32px;
-        letter-spacing: 3px;
-    }
-
-    header p {
+    nav a {
+        margin: 0 8px;
         font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
     }
 
     .music-grid {
         grid-template-columns: 1fr;
     }
 
-    .container {
-        padding: 35px 18px;
+    .music-section {
+        padding: 40px 5%;
     }
-
-    nav button {
-        padding: 10px 16px;
-    }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
+    <div class="logo">GAVIN:D</div>
 
-    <div class="small-title">
-        WELCOME TO MY MUSIC WORLD
-    </div>
-
-    <h1>GAVIN:D MUSIC</h1>
-
-    <p>
-        Discover the music and works of GAVIN:D
-    </p>
-
-    <a class="header-btn"
-       href="https://open.spotify.com/artist/6gYafDbRgLFc6zFKxKCP22"
-       target="_blank">
-       ♫ LISTEN ON SPOTIFY
-    </a>
-
+    <nav>
+        <a href="#home">หน้าแรก</a>
+        <a href="#music">เพลง</a>
+        <a href="#about">เกี่ยวกับ</a>
+    </nav>
 </header>
 
-<!-- CATEGORY BUTTONS -->
-<nav>
+<section class="hero" id="home">
+    <h1>GAVIN:D</h1>
+    <p>WELCOME TO GAVIN:D MUSIC WORLD</p>
+    <p>พื้นที่รวมเพลงที่คุณชื่นชอบ ฟังเพลงและเพลิดเพลินไปด้วยกัน</p>
+</section>
 
-    <button class="active"
-    onclick="filterMusic('all',this)">
-    ทั้งหมด
-    </button>
+<section class="music-section" id="music">
 
-    <button
-    onclick="filterMusic('single',this)">
-    เพลงเดี่ยว
-    </button>
-
-    <button
-    onclick="filterMusic('album',this)">
-    อัลบั้ม
-    </button>
-
-    <button
-    onclick="filterMusic('collab',this)">
-    เพลงร่วมงาน
-    </button>
-
-</nav>
-
-<!-- MUSIC SECTION -->
-<main class="container">
-
-    <div class="section-heading">
-
-        <h2>MY MUSIC COLLECTION</h2>
-
-        <p>
-            รวมผลงานเพลงของ GAVIN:D
-            เลือกเพลงที่ชอบแล้วเปิดฟังผ่าน Spotify
-        </p>
-
+    <div class="section-title">
+        <h2>MY FAVORITE SONGS</h2>
+        <p>รวมเพลงที่ชื่นชอบจาก GAVIN:D</p>
     </div>
 
     <div class="music-grid">
 
-        <!-- CARD 1 -->
-        <div class="card" data-category="album">
-
-            <img
-            src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=700"
-            alt="ROOM101">
-
-            <div class="card-info">
-
-                <span class="category">ALBUM</span>
-
-                <h3>ROOM101</h3>
-
-                <p>GAVIN:D - Album</p>
-
-                <a class="spotify-btn"
-                href="https://open.spotify.com/album/5KyBfveZb2nGL3Hl4qlwz3"
-                target="_blank">
-                ♫ Spotify
-                </a>
-
-            </div>
+        <div class="music-card">
+            <h3>ROOM101</h3>
+            <p>เพลงที่ 01</p>
+            <iframe
+                src="https://open.spotify.com/embed/track/6NVcYl6hKwwXJaCujjEwle"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
         </div>
 
-        <!-- CARD 2 -->
-        <div class="card" data-category="single">
-
-            <img
-            src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700"
-            alt="Music">
-
-            <div class="card-info">
-
-                <span class="category">SINGLE</span>
-
-                <h3>A Rocket to the Moon</h3>
-
-                <p>GAVIN:D - Single</p>
-
-                <a class="spotify-btn"
-                href="https://open.spotify.com/search/GAVIN%3AD%20A%20Rocket%20to%20the%20Moon"
-                target="_blank">
-                ♫ Spotify
-                </a>
-
-            </div>
+        <div class="music-card">
+            <h3>A Rocket to the Moon</h3>
+            <p>เพลงที่ 02</p>
+            <iframe
+                src="https://open.spotify.com/embed/track/4Tp1SRCTJ6LO8XA3i9vuAT"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
         </div>
 
-        <!-- CARD 3 -->
-        <div class="card" data-category="single">
-
-            <img
-            src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=700"
-            alt="Music">
-
-            <div class="card-info">
-
-                <span class="category">SINGLE</span>
-
-                <h3>รักได้ป่าว</h3>
-
-                <p>GAVIN:D - Single</p>
-
-                <a class="spotify-btn"
-                href="https://open.spotify.com/search/GAVIN%3AD"
-                target="_blank">
-                ♫ Spotify
-                </a>
-
-            </div>
+        <div class="music-card">
+            <h3>รักได้ป่าว</h3>
+            <p>เพลงที่ 03</p>
+            <iframe
+                src="https://open.spotify.com/embed/track/5j9eyp0YnOKzAjQyXXXSeb"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
         </div>
 
-        <!-- CARD 4 -->
-        <div class="card" data-category="single">
-
-            <img
-            src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=700"
-            alt="Music">
-
-            <div class="card-info">
-
-                <span class="category">SINGLE</span>
-
-                <h3>คิดถึงไม่ไหว</h3>
-
-                <p>GAVIN:D - Single</p>
-
-                <a class="spotify-btn"
-                href="https://open.spotify.com/artist/6gYafDbRgLFc6zFKxKCP22"
-                target="_blank">
-                ♫ Spotify
-                </a>
-
-            </div>
+        <div class="music-card">
+            <h3>คิดถึงไม่ไหว</h3>
+            <p>เพลงที่ 04</p>
+            <iframe
+                src="https://open.spotify.com/embed/track/2bIZMBZexPYWiAwHi4KWXQ"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
         </div>
 
-        <!-- CARD 5 -->
-        <div class="card" data-category="collab">
-
-            <img
-            src="https://images.unsplash.com/photo-1506157786151-b8491531f063?w=700"
-            alt="Music">
-
-            <div class="card-info">
-
-                <span class="category">COLLABORATION</span>
-
-                <h3>ได้แค่เดินมาส่ง</h3>
-
-                <p>GAVIN:D x BLVCKHEART</p>
-
-                <a class="spotify-btn"
-                href="https://open.spotify.com/search/GAVIN%3AD%20BLVCKHEART"
-                target="_blank">
-                ♫ Spotify
-                </a>
-
-            </div>
+        <div class="music-card">
+            <h3>ได้แค่เดินมาส่ง</h3>
+            <p>เพลงที่ 05</p>
+            <iframe
+                src="https://open.spotify.com/embed/track/1FhxX1Su9kwKFEqM4qqEJ6"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
         </div>
 
-        <!-- CARD 6 -->
-        <div class="card" data-category="collab">
-
-            <img
-            src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=700"
-            alt="Music">
-
-            <div class="card-info">
-
-                <span class="category">COLLABORATION</span>
-
-                <h3>GAVIN:D Collaboration</h3>
-
-                <p>More music by GAVIN:D</p>
-
-                <a class="spotify-btn"
-                href="https://open.spotify.com/artist/6gYafDbRgLFc6zFKxKCP22"
-                target="_blank">
-                ♫ Spotify
-                </a>
-
-            </div>
+        <div class="music-card">
+            <h3>อย่ามากกว่าฉันก็พอ</h3>
+            <p>เพลงที่ 06</p>
+            <iframe
+                src="https://open.spotify.com/embed/track/1MByAT550hFxW3RZgb6EGy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
         </div>
 
     </div>
-
-    <!-- SPOTIFY PLAYER -->
-    <section class="spotify-section">
-
-        <h2>LISTEN WITH SPOTIFY</h2>
-
-        <p>
-            เปิดฟังผลงานเพลงผ่านเครื่องเล่น Spotify
-        </p>
-
-        <iframe
-        src="https://open.spotify.com/embed/album/5KyBfveZb2nGL3Hl4qlwz3?utm_source=generator"
-        width="100%"
-        height="352"
-        frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
-        </iframe>
-
-    </section>
-
-</main>
-
-<!-- ABOUT -->
-<section class="about">
-
-    <h2>ABOUT GAVIN:D</h2>
-
-    <p>
-        GAVIN:D เป็นศิลปินที่มีเอกลักษณ์ทางดนตรี
-        เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมและแนะนำผลงานเพลง
-        รวมถึงช่องทางการฟังเพลงผ่าน Spotify
-        ให้ผู้เข้าชมสามารถค้นหาเพลงและเข้าถึงผลงานได้ง่ายขึ้น
-    </p>
-
 </section>
 
-<!-- FOOTER -->
+<section class="about" id="about">
+    <h2>ABOUT GAVIN:D</h2>
+    <p>
+        เว็บไซต์นี้จัดทำขึ้นเพื่อรวบรวมเพลงที่ชื่นชอบจาก GAVIN:D
+        ให้ผู้เข้าชมสามารถเลือกฟังเพลงผ่าน Spotify
+        ได้อย่างสะดวก พร้อมออกแบบเว็บไซต์ให้สวยงาม
+        ใช้งานง่าย และรองรับทั้งคอมพิวเตอร์และโทรศัพท์มือถือ
+    </p>
+</section>
+
 <footer>
-
-    <h2>GAVIN:D MUSIC</h2>
-
-    <p>© 2026 GAVIN:D MUSIC WEBSITE</p>
-
-    <p>Made with love for music ♡</p>
-
-    <a href="https://open.spotify.com/artist/6gYafDbRgLFc6zFKxKCP22"
-       target="_blank"
-       style="color:#1ed760;text-decoration:none;">
-       Spotify Official
-    </a>
-
+    <p>© 2026 GAVIN:D MUSIC WEBSITE | Created for Education</p>
 </footer>
-
-<!-- JAVASCRIPT -->
-<script>
-
-function filterMusic(category, button) {
-
-    const cards = document.querySelectorAll(".card");
-
-    cards.forEach(function(card) {
-
-        if (
-            category === "all" ||
-            card.dataset.category === category
-        ) {
-
-            card.style.display = "block";
-
-        } else {
-
-            card.style.display = "none";
-
-        }
-
-    });
-
-    const buttons = document.querySelectorAll("nav button");
-
-    buttons.forEach(function(btn) {
-
-        btn.classList.remove("active");
-
-    });
-
-    button.classList.add("active");
-
-}
-
-</script>
 
 </body>
 </html>
+
 
 
